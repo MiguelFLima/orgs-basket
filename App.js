@@ -1,23 +1,26 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar, SafeAreaView, View } from "react-native";
 import Cesta from "./src/screens/Cesta";
+import {
+  useFonts,
+  Montserrat_400Regular,
+  Montserrat_700Bold,
+} from "@expo-google-fonts/montserrat";
 
 export default function App() {
+  const [fontCarregada] = useFonts({
+    MontserratRegular: Montserrat_400Regular,
+    MontserratBold: Montserrat_700Bold,
+  });
+
+  if (!fontCarregada) {
+    return <View></View>;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>UAUAs</Text>
-      <StatusBar style="auto" />
+    <SafeAreaView>
+      <StatusBar />
       <Cesta />
-    </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
