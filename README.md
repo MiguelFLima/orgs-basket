@@ -4,5 +4,7 @@
   * EditorConfig
 
   * google/fonts
+  * App Loading
+  * Text Component
 
   uploading...
