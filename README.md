@@ -5,6 +5,8 @@
 
   * google/fonts
   * App Loading
+  * Mocks
   * Text Component
+  * FlatList
+  * Touchable Opacity
 
-  uploading...
